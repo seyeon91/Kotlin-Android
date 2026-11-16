@@ -19,6 +19,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.androidbook.bookmarket.mypage.MyPageActivity
 import com.androidbook.bookmarket.marketinfo.MarketInfoActivity
+import com.androidbook.bookmarket.customerinquiry.BoardActivity
 
 class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -61,7 +62,8 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     fun onCustomerInquiryClick(view: View?) {
-        Toast.makeText(getApplicationContext(), "고객문의 버튼을 클릭하였습니다", Toast.LENGTH_LONG).show()
+        val intent = Intent(this, BoardActivity::class.java)
+        startActivity(intent)
     }
 
     fun onMyPageClick(view: View?) {
