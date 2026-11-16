@@ -1,5 +1,6 @@
 package com.androidbook.bookmarket
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -22,5 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     fun onBookClick(view: View?) {
         Toast.makeText(getApplicationContext(), "도서 쇼핑몰을 시작합니다", Toast.LENGTH_LONG).show()
+        val intent = Intent(this, MenuActivity::class.java)
+        startActivity(intent)
     }
 }
