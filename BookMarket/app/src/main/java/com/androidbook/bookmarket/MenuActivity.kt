@@ -14,6 +14,9 @@ import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 
 class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -82,7 +85,18 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu01 -> {
-                Toast.makeText(this, " 메뉴1 : " + item.title, Toast.LENGTH_SHORT).show()
+                val builder = AlertDialog.Builder(this)
+                val dialogView = layoutInflater.inflate(R.layout.dialog_login, null)
+                builder.setView(dialogView)
+                val dialog = builder.show()
+
+                val loginBtn: Button = dialogView.findViewById(R.id.loginBtn)
+                loginBtn.setOnClickListener {
+                    val tvID: TextView = dialogView.findViewById(R.id.userID)
+                    val tvPW: TextView = dialogView.findViewById(R.id.userPW)
+                    dialog.dismiss()
+                    Toast.makeText(this, "아이디: " + tvID.text + " 비밀번호: " + tvPW.text, Toast.LENGTH_LONG).show()
+                }
             }
             R.id.menu02 -> {
                 Toast.makeText(this, " 메뉴2 : " + item.title, Toast.LENGTH_SHORT).show()
