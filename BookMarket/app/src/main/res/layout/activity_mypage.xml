@@ -9,11 +9,30 @@
     android:orientation="vertical"
     tools:context=".mypage.MyPageActivity">
 
-    <ImageView
-        android:id="@+id/loginimg"
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/mypage_user" />
+        android:layout_gravity="center_horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/loginimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mypage_user"
+            app:shapeAppearanceOverlay="@style/CircleImage" />
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|end"
+            android:background="@drawable/bg_circle_button"
+            android:contentDescription="프로필 사진 변경"
+            android:padding="9dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mypage_modify" />
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/work_layout"
