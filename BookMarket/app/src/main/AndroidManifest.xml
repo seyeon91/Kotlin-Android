@@ -55,6 +55,19 @@
             android:exported="false"
             android:label="주문서"
             android:theme="@style/MyTheme.Cart" />
+
+        <activity
+            android:name=".mypage.MyPageActivity"
+            android:exported="false"
+            android:label="나의 페이지"
+            android:theme="@style/MyTheme.BookMarket" />
+
+        <activity
+            android:name=".mypage.MemoActivity"
+            android:exported="false"
+            android:label="메모장"
+            android:theme="@style/MyTheme.BookMarket" />
+
     </application>
 
 </manifest>

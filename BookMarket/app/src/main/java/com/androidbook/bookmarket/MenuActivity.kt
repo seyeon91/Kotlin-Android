@@ -17,6 +17,7 @@ import com.google.android.material.navigation.NavigationView
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.androidbook.bookmarket.mypage.MyPageActivity
 
 class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -63,7 +64,8 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     fun onMyPageClick(view: View?) {
-        Toast.makeText(getApplicationContext(), "나의페이지 버튼을 클릭하였습니다", Toast.LENGTH_LONG).show()
+        val intent = Intent(this, MyPageActivity::class.java)
+        startActivity(intent)
     }
 
     fun onMarketInfoClick(view: View?) {
