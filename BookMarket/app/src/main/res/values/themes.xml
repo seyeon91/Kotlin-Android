@@ -14,4 +14,10 @@
         <item name="android:statusBarColor">@color/appBarColor</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
+
+    <style name="MyTheme.Cart" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/appBarColor</item>
+        <item name="android:statusBarColor">@color/appBarColor</item>
+        <item name="android:navigationBarColor">@color/appBarColor</item>
+    </style>
 </resources>
